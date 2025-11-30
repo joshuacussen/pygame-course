@@ -47,10 +47,10 @@ Write your answers down.
 1. On what line is the window size set?
 1. How would you double the window size?
 1. What does commenting out `pygame.init()` do?
-1. What does changing  
-   `pygame.draw.circle(screen, (0, 0, 255), (x, 200), 40)`  
-   to  
-   `pygame.draw.circle(screen, (0, 255, 0), (x, 200), 40)`  
+1. What does changing
+   `pygame.draw.circle(screen, (0, 0, 255), (x, 200), 40)`
+   to
+   `pygame.draw.circle(screen, (0, 255, 0), (x, 200), 40)`
    do?
     - What does this tell you about how Pygame represents colours?
 1. Which line number makes the shape move?
