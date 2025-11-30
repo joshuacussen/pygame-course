@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Lesson 1"
 ---
 # Lesson 1

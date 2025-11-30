@@ -1,3 +1,6 @@
+---
+layout: default
+---
  # Lessons in Pygame
 
  ## Lessons
