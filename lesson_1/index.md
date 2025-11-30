@@ -45,7 +45,7 @@ Write your answers down.
 1. Which line number is responsible for drawing the shape?
 1. What happens if you comment out line 30?
     - What does this tell you about what `pygame.display.flip()` does?
-
+1. What happens when the shape reaches the edge of the window?
 
 ### Modify
 Make changes to explore how the code works.
@@ -58,6 +58,8 @@ Make changes to explore how the code works.
     1. Make it move in the opposite direction
     1. Make it move diagonally
 1. Add a new shape that is centered based on a calculation using `WIDTH` and `HEIGHT`
+1. Prevent the shape from leaving the window.
+    - Hint: use selection and check the x-coordinate relative to `WIDTH` and `0`
 
 ### Make
 Create a small animation scene using only things covered so far.
@@ -75,3 +77,28 @@ Your animation must include:
 - A shape that changes colour once at startup
 - A shape that changes colour every 10 clock ticks
 - Something positioned using `WIDTH // 3` or `HEIGHT // 4`
+
+
+## Homework
+
+Create a short Pygame 'screensaver' with multiple animated elements.
+Be as creative as you like.
+
+### Requirements
+
+- At least four animated shapes
+- At least one shape whose movement changes over time (e.g., speed or direction)
+- At least one shape that bounces off the edge of the window (separate to the shape above)
+- A colour change that happens during the animation
+- A timed event: after some amount of time, something must change (e.g., a shape appears/disappears, colour change, movement change)
+
+### Options
+
+Choose two or more optional enhancements:
+- A shape that follows a curved path
+    - Tip: change both x and y each frame by different amounts
+- A shape that grows or shrinks in size
+- A fade effect using gradually changing background colours
+- A simple caption or title drawn using `pygame.font`
+- A shape that 'reacts' to another (e.g., follows it, changes colour when near it)
+- Encapsulate a shape and appropriate attributes in a class (e.g., position, speed, colour, update method)
