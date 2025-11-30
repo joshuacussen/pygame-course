@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Lesson 1: Intro to Pygame"
+title: "Lesson 1"
 ---
-# Lesson 1: Intro to Pygame
+# Lesson 1
 
 ## Sections
 - [Worksheet](worksheet.md)
