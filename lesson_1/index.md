@@ -3,14 +3,73 @@ layout: default
 title: "Lesson 1"
 ---
 # Lesson 1
+- [Starter code](starter_code.md)
 
 ## Sections
-- [Worksheet](worksheet.md)
-- [Homework](homework.md)
-- [Starter code](start_code.md)
+- [Worksheet](#worksheet)
+- [Homework](#homework)
 
 ## Summary
 In this lesson, you will:
 - Understand the game loop
 - Draw shapes on the screen
 - Animate simple movement
+
+## Worksheet
+### Predict
+Predict answers to the following questions without running the program.
+Write your answers down.
+
+1. What colour will the background be?
+1. What shape will be drawn? Where?
+1. What will happen to the shape over time?
+1. What does `clock.tick(60)` control?
+1. What will happen when you close the window?
+
+### Run
+Run the program.
+Compare your predictions to the actual behaviour.
+
+### Investigate
+Answer these questions by examining the code.
+Write your answers down.
+
+1. On what line is the window size set?
+1. How would you double the window size?
+1. What does commenting out `pygame.init()` do?
+1. What does changing the line `pygame.draw.circle(screen, (0, 0, 255), (x, 200), 40)` to `pygame.draw.circle(screen, (0, 255, 0), (x, 200), 40)` do?
+    - What does this tell you about how Pygame represents colours?
+1. Which line makes the shape move?
+1. Which line number is responsible for drawing the shape?
+1. What happens if you comment out line 30?
+    - What does this tell you about what `pygame.display.flip()` does?
+
+
+### Modify
+Make changes to explore how the code works.
+
+1. Identify and remove at least three magic numbers by replacing them with variables.
+1. Change the colour of the background to a colour of your choosing.
+1. Replace the circle with a rectangle (see the [docs](https://www.pygame.org/docs/ref/draw.html))
+1. Make changes to the movement of the shape:
+    1. Make it move faster
+    1. Make it move in the opposite direction
+    1. Make it move diagonally
+1. Add a new shape that is centered based on a calculation using `WIDTH` and `HEIGHT`
+
+### Make
+Create a small animation scene using only things covered so far.
+
+#### Requirements
+Your animation must include:
+- One static shape
+- One moving shape
+- At least one colour change
+- One use of `WIDTH` or `HEIGHT` in a calculation
+
+#### Ideas to try
+- A rectangle sliding across the screen
+- A circle moving diagonally
+- A shape that changes colour once at startup
+- A shape that changes colour every 10 clock ticks
+- Something positioned using `WIDTH // 3` or `HEIGHT // 4`
