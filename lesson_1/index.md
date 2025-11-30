@@ -96,7 +96,7 @@ Be as creative as you like.
 
 Choose two or more optional enhancements:
 - A shape that follows a curved path
-    - Tip: change both x and y each frame by different amounts
+    - Hint: change both x and y each frame by different amounts
 - A shape that grows or shrinks in size
 - A fade effect using gradually changing background colours
 - A simple caption or title drawn using `pygame.font`
