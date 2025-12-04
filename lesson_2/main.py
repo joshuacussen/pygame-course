@@ -4,10 +4,13 @@ from models import Ball
 WIDTH = 600
 HEIGHT = 400
 CLOCK = 60
+BG_COLOR = (255, 255, 255)
 
 pygame.init()
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Bouncing balls")
+
 clock = pygame.time.Clock()
 
 balls = [
@@ -21,7 +24,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    screen.fill((255, 255, 255))
+    screen.fill(BG_COLOR)
 
     for ball in balls:
         ball.update(screen)
