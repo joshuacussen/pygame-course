@@ -61,11 +61,9 @@ Make changes to explore how the code works.
 
     The `_get_<direction>` methods should return the position of the ball's edge in that direction (hint: how can you use the ball's radius to work this out?).
 
-#### Methods
-
 | Visibility | Method Signature | Returns | Description |
 |-----------|------------------|---------|-------------|
-| public    | `get_coords()` | `tuple[int, int]` | Returns `(x, y)` — the ball’s current position |
+| public    | `get_coords()` | tuple[int, int] | Returns `(x, y)`, the ball’s current position |
 | private   | `_get_left()`   | int | Returns the x-coordinate of the left edge (`x - radius`) |
 | private   | `_get_right()`  | int | Returns the x-coordinate of the right edge (`x + radius`) |
 | private   | `_get_top()`    | int | Returns the y-coordinate of the top edge (`y - radius`) |
@@ -92,3 +90,24 @@ def update(self, screen, x_bounds, y_bounds):
     self._move(x_bounds, y_bounds)
     self._draw(screen)
 ```
+
+#### Extension tasks
+Complete these tasks in any order.
+
+##### Colour changing
+1. Implement a `_change_color(new_color)` method to change the ball's colour
+1. Modify `_move` so the ball changes colour each time it bounces.
+
+##### Inside-bounds?
+Implement `inside_bounds`:
+    - Returns True if every part of the ball is within given bounds
+    - Returns False otherwise
+
+##### Randomised bounce velocities
+Change `_move` so that, when the ball bounces, the velocity is slightly randomised.
+Make sure the ball cannot become frozen!
+
+##### Decaying velocity
+Create a `DecayingBall` class that inherits from `Ball`.
+- Add a new attribute, `decay_factor` (e.g., 0.9)
+- Override `_move` so that velocity is scaled after each bounce
