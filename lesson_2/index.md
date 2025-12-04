@@ -43,34 +43,37 @@ Answer these questions by examining the code.
 ### Modify
 Make changes to explore how the code works.
 
+1. Implement the constructor using the information below:
+    | Visibility | Name   | Type | Description |
+    |-----------|--------|------|-------------|
+    | private   | `x`    | int  | Horizontal position of the ball’s centre |
+    | private   | `y`    | int  | Vertical position of the ball’s centre |
+    | private   | `vx`   | int  | Horizontal velocity (change in x each frame) |
+    | private   | `vy`   | int  | Vertical velocity (change in y each frame) |
+    | private   | `radius` | int | Size of the ball |
 1. Implement the `_draw` method
 1. Implement the `_move` method
     - At this stage, **do not** implement bouncing
 
 
 ### Make
-1. Use the class diagram below to implement the missing `get` methods (`get_coords`, `_get_left`, `_get_right`, `_get_top`, `_get_bottom`).
+1. Use the information below to implement the missing `get` methods (`get_coords`, `_get_left`, `_get_right`, `_get_top`, `_get_bottom`).
 
     The `_get_<direction>` methods should return the position of the ball's edge in that direction (hint: how can you use the ball's radius to work this out?).
 
-```mermaid
-classDiagram
-    class Ball {
-        private int x
-        private int y
-        private int vx
-        private int vy
-        private int radius
-        public get_coords() tuple
-        private _get_left() int
-        private _get_right() int
-        private _get_top() int
-        private _get_bottom() int
-        private _draw(screen) None
-        private _move(x_bounds, y_bounds) None
-        public update(screen, x_bounds, y_bounds) None
-    }
-```
+#### Methods
+
+| Visibility | Method Signature | Returns | Description |
+|-----------|------------------|---------|-------------|
+| public    | `get_coords()` | `tuple[int, int]` | Returns `(x, y)` — the ball’s current position |
+| private   | `_get_left()`   | int | Returns the x-coordinate of the left edge (`x - radius`) |
+| private   | `_get_right()`  | int | Returns the x-coordinate of the right edge (`x + radius`) |
+| private   | `_get_top()`    | int | Returns the y-coordinate of the top edge (`y - radius`) |
+| private   | `_get_bottom()` | int | Returns the y-coordinate of the bottom edge (`y + radius`) |
+| private   | `_draw(screen)` | None | Draws the ball on the given `screen` |
+| private   | `_move(x_bounds, y_bounds)` | None | Updates the ball’s position (later: add bouncing) |
+| public    | `update(screen, x_bounds, y_bounds)` | None | Calls `_move` then `_draw` each frame |
+
 
 2. Once all the getters work, update `move` so the ball cannot leave the window.
     - When the ball reaches and edge, it should bounce by reversing the appropriate velocity.
@@ -89,14 +92,3 @@ def update(self, screen, x_bounds, y_bounds):
     self._move(x_bounds, y_bounds)
     self._draw(screen)
 ```
-
-## Homework
-
-### Requirements
-
-- 
-
-
-### Options
-Choose two or more optional enhancements:
-- 
