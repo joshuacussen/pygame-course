@@ -3,11 +3,6 @@ layout: default
 title: "Lesson 2"
 ---
 
-<script type="module">
-import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
-mermaid.initialize({ startOnLoad: true });
-</script>1
-
 # Lesson 2
 
 - [Lesson files](#lesson-files)
