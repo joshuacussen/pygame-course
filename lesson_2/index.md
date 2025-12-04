@@ -89,23 +89,23 @@ def update(self, screen, x_bounds, y_bounds):
     self._draw(screen)
 ```
 
-#### Extensions
+### Extensions
 Complete these tasks in any order.
 
-##### Colour changing
+#### Colour changing
 1. Implement a `_change_color(new_color)` method to change the ball's colour
 1. Modify `_move` so the ball changes colour each time it bounces.
 
-##### Inside-bounds?
+#### Inside-bounds?
 Implement `inside_bounds`:
 - Returns True if every part of the ball is within given bounds
 - Returns False otherwise
 
-##### Randomised bounce velocities
+#### Randomised bounce velocities
 Change `_move` so that, when the ball bounces, the velocity is slightly randomised.
 Make sure the ball cannot become frozen!
 
-##### Decaying velocity
+#### Decaying velocity
 Create a `DecayingBall` class that inherits from `Ball`.
 - Add a new attribute, `decay_factor` (e.g., 0.9)
 - Override `_move` so that velocity is scaled after each bounce
